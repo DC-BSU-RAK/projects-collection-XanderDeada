@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Reaction Lab</string>
+    <string name="view_reactions">View Discovered Reactions (%1$d)</string>
+</resources>

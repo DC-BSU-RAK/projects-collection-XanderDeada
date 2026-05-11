@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/slot1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_element_container"
+        app:layout_constraintEnd_toStartOf="@+id/tv_plus"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/tv_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/slot1"
+        app:layout_constraintEnd_toStartOf="@+id/slot2"
+        app:layout_constraintStart_toEndOf="@+id/slot1"
+        app:layout_constraintTop_toTopOf="@+id/slot1" />
+
+    <ImageView
+        android:id="@+id/slot2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/slot1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_plus"
+        app:layout_constraintTop_toTopOf="@+id/slot1" />
+
+    <LinearLayout
+        android:id="@+id/btn_element_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton android:id="@+id/btn_pyro" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:background="@android:color/transparent" android:scaleType="fitCenter" android:src="@drawable/pyro_icon" android:importantForAccessibility="no"/>
+        <ImageButton android:id="@+id/btn_hydro" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:background="@android:color/transparent" android:scaleType="fitCenter" android:src="@drawable/hydro_icon" android:importantForAccessibility="no"/>
+        <ImageButton android:id="@+id/btn_anemo" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:background="@android:color/transparent" android:scaleType="fitCenter" android:src="@drawable/anemo_icon" android:importantForAccessibility="no"/>
+        <ImageButton android:id="@+id/btn_cryo" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:background="@android:color/transparent" android:scaleType="fitCenter" android:src="@drawable/cryo_icon" android:importantForAccessibility="no"/>
+        <ImageButton android:id="@+id/btn_electro" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:background="@android:color/transparent" android:scaleType="fitCenter" android:src="@drawable/electro_icon" android:importantForAccessibility="no"/>
+        <ImageButton android:id="@+id/btn_geo" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:background="@android:color/transparent" android:scaleType="fitCenter" android:src="@drawable/geo_icon" android:importantForAccessibility="no"/>
+        <ImageButton android:id="@+id/btn_dendro" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:background="@android:color/transparent" android:scaleType="fitCenter" android:src="@drawable/dendro_icon" android:importantForAccessibility="no"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#673AB7"
+        android:text="Combine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_element_container"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <Button
+        android:id="@+id/btn_collection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Discovered Reactions (0)"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sum"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#F44336"
+        android:text="Reset Slots"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_collection" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="260dp"
+        android:layout_height="131dp"
+        android:text=" Reaction Lab"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_help"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:contentDescription="Help Button"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
