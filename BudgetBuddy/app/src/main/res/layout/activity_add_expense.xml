@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/buddy_dark_blue"
+    tools:context=".AddExpense">
+
+    <TextView
+        android:id="@+id/tv_add_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="24dp"
+        android:text="Log New Expense"
+        android:textColor="@color/buddy_gold"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:hint="Amount ($)"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray_text"
+        android:backgroundTint="@color/buddy_gold"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="Category (e.g. Food, Rent)"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray_text"
+        android:backgroundTint="@color/buddy_gold"
+        app:layout_constraintTop_toBottomOf="@id/et_amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_log_expense"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/buddy_gold"
+        android:text="Log Transaction"
+        android:textColor="@color/buddy_dark_blue"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/et_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_cancel_expense"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cancel and Go Back"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/btn_log_expense"
+        app:layout_constraintStart_toStartOf="@id/btn_log_expense"
+        app:layout_constraintTop_toBottomOf="@id/btn_log_expense" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

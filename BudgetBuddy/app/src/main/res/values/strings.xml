@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BudgetBuddy</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_add">Add</string>
+    <string name="nav_history">History</string>
+    <string name="welcome_text">Welcome!</string>
+    <string name="default_balance">$0.00</string>
+</resources>
